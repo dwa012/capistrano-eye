@@ -45,6 +45,6 @@ namespace :load do
     set :eye_env, -> { { rails_env: fetch(:stage) } }
     set :eye_application, -> { fetch(:application) }
     set :eye_config, -> { "./config/#{fetch(:application)}.eye" }
-    set :eye_executable -> :eye
+    set :eye_executable, :eye
   end
 end
